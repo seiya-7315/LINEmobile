@@ -1,0 +1,1452 @@
+@charset "UTF-8";
+
+$color:#07b53b;
+$color-2:#888;
+$font12:0.85vw;
+$font14:1vw;
+$font16:1.14vw;
+$font18:1.28vw;
+$font20:1.42vw;
+$font22:1.57vw;
+$font24:1.71vw;
+$font34:2.42vw;
+$font36:2.57vw;
+
+@mixin section4($text-padding:7.9% 45% 8% 8%,$a-padding:3% 30%){
+    .tex-6{
+        padding: $text-padding;
+        border: solid 2px #dfdfdf;
+        @media screen and (max-width:767px){
+            padding: 3.9% 30% 8% 5%;
+        }
+        h2{
+            font-size: 1.57vw;
+            font-weight: bold;
+            white-space: pre;
+            @media screen and (max-width:767px){
+                font-size: 20px;
+            }
+        }
+        p{
+            font-size: 1.14vw;
+            white-space: pre-wrap;
+            @media screen and (max-width:767px){
+                font-size: 14px;
+            }
+        }
+    }
+    .a-6{
+        text-align: center;
+        border-bottom: solid 2px #dfdfdf;
+        border-right: solid 2px #dfdfdf;
+        border-left: solid 2px #dfdfdf;
+        padding: $a-padding;
+        background: url(RD_pic4/ico_right_arrow_c777.png) no-repeat right 6% top 50%/3% auto;
+        a{
+            display: inline-block;
+            font-size: 1.35vw;
+            font-weight: bold;
+            color: #777777;
+            white-space: pre;
+            @media screen and (max-width:767px){
+                font-size: 16px;
+            }
+        }
+    }    
+}
+
+@mixin section1{
+    text-align: center;
+    width: 26.3%;
+    @media screen and (max-width:767px){
+        padding: 30px 0;
+        border-bottom: 1px solid #f4f4f4;
+    }
+
+    img{
+        margin-bottom: 4.7%;
+        max-width: 100%;
+        height: auto;
+        @media screen and (max-width:767px){
+            width: 81px;
+            margin-bottom: 13px;
+        }
+    }
+    h2{
+        margin-bottom: 6.7%;
+        font-size: 2.32vw;
+        @media screen and (max-width:767px){
+            font-size: 20px;
+            margin-bottom: 9px;
+        }
+    }
+    p{
+        margin: 0 8.8% 7.4%;
+        color: $color-2;
+        font-size: 1.02vw;
+        text-align: center;
+        white-space: pre;
+        @media screen and (max-width:767px){
+            width: 220px;
+            margin: 0 auto 19px;
+            font-size: 12px;
+        }
+    }
+    a{
+        display: inline-block;
+        width: 72%;
+        @media screen and (max-width:767px){
+            width: 210px;
+        }
+    }
+}
+
+
+/* ヘッダー下のスライドpc版 */
+@mixin pic_pc{
+    max-width: 100%;
+    height: auto;
+    padding: 18.5% 0;
+    background-image: url(RD_pic3/pc_banner_223.png);
+    background-position: center;
+    background-size: 192%;
+    @media screen and (max-width:767px){
+        display: none;
+    }
+}
+/* ヘッダー下のスライドスマホ版 */
+@mixin pic_sp{
+    background: url(RD_pic3/sp_banner_223.png)center;
+    background-size: 767px;
+    max-width: 100%;
+    height: 290px;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    .wrapper{
+        overflow: hidden;
+        header{
+            width: 100%;
+            /* ヘッダー緑の部分 */
+            .header-a{
+                width: 100%;
+                height: auto;
+                background-color: $color;
+                @media screen and (max-width:767px){
+                    height: 45px;
+                }
+        
+                .h-green{
+                    max-width: 100%;
+                    width: 88.5%;
+                    margin: 0 auto;
+                    height:100%;
+                    text-align: center;
+                    position: relative;
+                    padding: 5.6% 0 0;
+                    @media screen and (max-width:767px){
+                        height: 100%;
+                        padding: 0;
+                    }
+                    img{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        width: 48%;
+                        height: 100%;
+                        margin: 0 auto;
+                        @media screen and (max-width:767px){
+                            width: 214.09px;
+                        }
+                    }
+                }
+        
+            }
+            
+            /* ヘッダー白い部分 */
+            .h-white{
+                width: 100%;
+                height: auto;
+                background-color: white;
+        
+                .navbar{
+                    max-width: 100%;
+                    width: 83.5%;
+                    height: auto;
+                    margin: 0 auto;
+                    padding: 1.86% 0;
+                    @media screen and (max-width:767px){
+                        width: 100%;
+                        position: relative;
+                        height: 55px;
+                        padding: 0;
+                    }
+        
+                    .navbar-brand{
+                        padding: 0;
+                        margin-right: 1.3%;
+                        max-width: 100%;
+                        width: 12.8%;
+                        height: auto;
+                        @media screen and (max-width:767px){
+                            display: inline-block;
+                            height: 18px;
+                            width: 132.34px;
+                            margin: 18.5px 0;
+                            position: absolute;
+                            top: 0;
+                            left: 15px;
+                        }
+                        img{
+                            max-width: 100%;
+                            height: auto;
+                            @media screen and (max-width:767px){
+                                height: 100%;
+                                vertical-align: top;
+                            }
+                        }
+                    }
+                    .navbar-toggler{
+                        margin-left: 80%;
+                        @media screen and (max-width:767px){
+                            background: url(RD_pic15/ico_menu_open2Sp.png) no-repeat center/50%;
+                            margin-left: 91%;
+                            padding: 2%;
+                            border-left: 1px solid rgb(238, 238, 238);
+                        }
+                    }
+                    
+                    .navbar-collapse{
+                        max-width: 100%;
+                        width: 56.1%;
+                        height: auto;
+                        ul{
+                            height: auto;
+                            max-width: 100%;
+                            width: 100%;
+                            li{
+                                list-style: none;
+                                padding: 1.7% 1.9%;
+                                margin-right: 2.5%;
+                                color: $color-2;
+                                font-weight: bold;
+                                font-size: 1.48vw;
+                                max-width: 100%;
+                                height: auto;
+                                white-space: nowrap;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+        
+                    .h-apply{
+                        display: flex;
+                        width: 21.8%;
+                        max-width: 100%;
+                        height: auto;
+                        @import"import";
+        
+                        .mypage{
+                            width: 39.7%;
+                            max-width: 100%;
+                            height: auto;
+                            a{
+                                display: inline-block;
+                                font-size: 1vw;
+                                padding: 18% 10.7%;
+                                max-width: 100%;
+                                height: auto;
+                                white-space: nowrap;
+                            }
+                        }
+                        @media screen and (max-width:767px){
+                            .mypage a{
+                                display: none;
+                            }
+                        }
+        
+                        .apply{
+                            width: 59.8%;
+                            max-width: 100%;
+                            height: auto;
+                            @media screen and (max-width:767px){
+                                width: 90px;
+                                height: 30px;
+                                margin: 12.5px;
+                                position: absolute;
+                                top: 0;
+                                right: 10%;
+                            }
+                            a{
+                                display: inline-block;
+                                max-width: 100%;
+                                height: auto;
+                                font-size: 1.4vw;
+                                font-weight: bold;
+                                padding: 6.4% 15% 6.4% 33.5%;
+                                background: url(RD_pic3/header_icon1.png) no-repeat left 14% top 45%/18% auto $btn-success;
+                                white-space: nowrap;
+                                @media screen and (max-width:767px){
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+        
+                }
+                
+            }
+        
+        
+        }
+        
+        
+        main{
+            width: 100%;
+        
+            .main1{
+                max-width: 100%;
+                height: auto;
+                position: relative;
+
+                /* スライド */
+                .main1-picA{
+                    .picA_pc{
+                        @include pic_pc;
+                    }
+                    @media screen and (max-width:767px){
+                        .picA_sp{
+                           @include pic_sp;
+                        }
+                    }
+                }
+                .main1-picB{
+                    .picB_pc{
+                        @include pic_pc;
+                        background: url(RD_pic/pc_banner_ukuraina.png)center;
+                        background-size: 192%;
+                    }
+                    @media screen and (max-width:767px){
+                        .picB_sp{
+                           @include pic_sp;
+                           background: url(RD_pic/sp_banner_ukuraina.png)center;
+                           background-size: 767px;
+                        }
+                    }
+                }
+                .main1-picC{
+                    .picC_pc{
+                        @include pic_pc;
+                        background: url(RD_pic/pc_banner_Android.png)center;
+                        background-size: 192%;
+                    }
+                    @media screen and (max-width:767px){
+                        .picC_sp{
+                           @include pic_sp;
+                           background: url(RD_pic/sp_banner_Android.png)center;
+                           background-size: 767px;
+                        }
+                    }
+                }
+                .main1-picD{
+                    .picD_pc{
+                        @include pic_pc;
+                        background: url(RD_pic/pc_banner_LINEpoint.png)center;
+                        background-size: 192%;
+                    }
+                    @media screen and (max-width:767px){
+                        .picD_sp{
+                           @include pic_sp;
+                           background: url(RD_pic/sp_banner_LINEpoint.png)center;
+                           background-size: 767px;
+                        }
+                    }
+                }
+                .main1-picE{
+                    .picE_pc{
+                        @include pic_pc;
+                        background: url(RD_pic/pc_banner_purple.jpg)center;
+                        background-size: 192%;
+                    }
+                    @media screen and (max-width:767px){
+                        .picE_sp{
+                           @include pic_sp;
+                           background: url(RD_pic/sp_banner_purple.jpg)center;
+                           background-size: 767px;
+                        }
+                    }
+                }
+                .main1-picF{
+                    .picF_pc{
+                        @include pic_pc;
+                        background: url(RD_pic/pc_banner_iPhone7.png)center;
+                        background-size: 192%;
+                    }
+                    @media screen and (max-width:767px){
+                        .picF_sp{
+                           @include pic_sp;
+                           background: url(RD_pic/sp_banner_iPhone7.png)center;
+                           background-size: 767px;
+                        }
+                    }
+                }
+                .main1-picG{
+                    .picG_pc{
+                        @include pic_pc;
+                        background: url(RD_pic/pc_banner_Air.png)center;
+                        background-size: 192%;
+                    }
+                    @media screen and (max-width:767px){
+                        .picG_sp{
+                           @include pic_sp;
+                           background: url(RD_pic/sp_banner_Air.png)center;
+                           background-size: 767px;
+                        }
+                    }
+                }
+                .slide1{
+                    display: none;
+                }
+                @media screen and (max-width:767px){
+                    .slide2{
+                        display: none;
+                    }
+                }
+                .active{
+                    display: block;
+                }
+
+                /* スライド下のボタン */
+                .btn-wrapper{
+                    width: 20%;
+                    margin: 0 auto;
+                    justify-content: space-around;
+                    margin-top: 0.7%;
+                    .index-btn{
+                        border-radius: 16%;
+                        margin-right: 4%;
+                        text-align: center;
+                        width: 12%;
+                        color: white;
+                        background-color: $color;
+                        cursor: pointer;
+                    }
+                }
+            }
+        
+            .main2{
+                width: 100%;
+                height: auto;
+                padding: 3% 0 1%;
+                text-align: center;
+                .main2-pic{
+                    margin: 0 auto;
+                    width: 61.2%;
+                    height: auto;
+                    @media screen and (max-width:767px){
+                        display: none;
+                    }
+                    img{
+                        max-width: 100%;
+                        height: auto;
+                        @media screen and (max-width:767px){
+                            display: none;
+                        }
+                    }
+                }
+                .main2-picc{
+                    display: none;
+                    width: 94.4%;
+                    margin: 0 auto;
+                    height: auto;
+                    @media screen and (max-width:767px){
+                        display: block;
+                    }
+                    img{
+                        display: none;
+                        max-width: 100%;
+                        height: auto;
+                        display: none;
+                        @media screen and (max-width:767px){
+                            display: block;
+                        }
+                    }
+                }
+            }
+        
+            .main3{
+                width: 100%;
+                height: auto;
+                padding: 2% 0;
+                .main3-pic{
+                    max-width: 100%;
+                    height: auto;
+                    @media screen and (max-width:767px){
+                        display: none;
+                    }
+                    img{
+                        max-width: 100%;
+                        height: auto;
+                        @media screen and (max-width:767px){
+                            display: none;
+                        }
+                    }
+                }
+                .main3-picc{
+                    max-width: 100%;
+                    height: auto;
+                    display: none;
+                    @media screen and (max-width:767px){
+                        display: block;
+                    }
+                    img{
+                        max-width: 100%;
+                        height: auto;
+                        display: none;
+                        @media screen and (max-width:767px){
+                            display: block;
+                        }
+                    }
+                }
+            }
+        
+            .main4{
+                width: 100%;
+                height: auto;
+                padding: 4% 0;
+                .main4-cont{
+                    max-width: 100%;
+                    height: auto;
+                    margin: 0;
+                    justify-content: space-between;
+                    .section1{
+                        @include section1;
+                    }
+                    .section2{
+                        @include section1;
+                    }
+                    .section3{
+                        @include section1;
+                    }
+                }
+            }
+        
+            .main5{
+                width: 82.6%;
+                margin: 0 auto;
+                background: url(RD_pic2/bg_top_campaign_pc.png) no-repeat right 10% bottom 50%/38% auto $color;
+                .tex-5{
+                   color: white;
+                   padding: 5.96% 5.92% 5.94%;
+                   h2{
+                       font-weight: bold;
+                   }
+                   p{
+                       white-space: pre;
+                       font-size: 1.5vw;
+                   }
+                   a{
+                       color: $color;
+                       font-weight: bold;
+                       width: 22.8%;
+                       padding: 1.3%;
+                       height: auto;
+                       display: inline-block;
+                       font-size: $font16;
+                       @media screen and (max-width:767px){
+                           font-size: 16px;
+                           width: 179px;
+                       }
+                   }
+                }
+            }
+        
+            .main6{
+                width: 86.2%;
+                margin: 0 auto;
+                height: auto;
+                padding: 5.5% 0;
+                @media screen and (max-width:767px){
+                    width: 90%;
+                }
+                .main6-cont{
+                    max-width: 100%;
+                    height: auto;
+                    margin: 0;
+        
+                    .section4{
+                        background: url(RD_pic3/img_top03_01.png) no-repeat right 8% top 31%/33% auto;
+                        @media screen and (max-width:767px){
+                            background: url(RD_pic3/img_top03_01.png) no-repeat right 10% top 22%/107px auto;
+                        }
+                        @include section4
+                    }
+        
+                    .section5{
+                        background: url(RD_pic3/img_top03_pc.png) no-repeat right 19% top 36%/18% auto;
+                        @media screen and (max-width:767px){
+                            background: url(RD_pic3/img_top03_pc.png) no-repeat right 13% top 17%/59px auto;
+                        }
+                        @include section4(7.9% 45% 21% 8%,3% 25%)
+                    }
+        
+                    .section6{
+                        background: url(RD_pic3/img_top03_03.png) no-repeat right 14% top 40%/35% auto;
+                        @media screen and (max-width:767px){
+                            background: url(RD_pic3/img_top03_03.png) no-repeat right 10% top 22%/107px auto;
+                        }
+                        @include section4(7.9% 45% 14% 8%)
+                    }
+                }
+            }
+            .main7{
+                width: 100%;
+                height: auto;
+                padding: 9.6% 0 5%;
+                background: url(RD_pic3/top_guid_pc.png) no-repeat right 20% top 9%/26% auto $color;
+                position: relative;
+                @media screen and (max-width:767px){
+                    background-image: url(RD_pic6/top_guid_sp.png);
+                    background-position: right 10% top 4%;
+                }
+                .tex-7{
+                    color: white;
+                    position: absolute;
+                    top: 7%;
+                    left: 11%;
+                    @media screen and (max-width:767px){
+                        top: 5%;
+                        left: 7%;
+                    }
+                    h2{
+                        font-size: 2.57vw;
+                        font-weight: bold;
+                        margin-bottom: 3%;
+                        @media screen and (max-width:767px){
+                            font-size: 20px;
+                        }
+                    }
+                    p{
+                        font-size: 1.43vw;
+                        @media screen and (max-width:767px){
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .cont-7{
+                    display: flex;
+                    width: 81.43%;
+                    margin: 5% auto 0 auto;
+                    justify-content: space-between;
+                    @media screen and (max-width:767px){
+                        display: block;
+                        margin: 17% auto 0 auto;
+                        width: 90%;
+                    }
+                    .kiji-left{
+                        background-color: white;
+                        width: 49.6%;
+                        padding: 9% 3%;
+                        @media screen and (max-width:767px){
+                            width: 100%;
+                            margin: 0 auto;
+                            padding: 5% 3%;
+                        }
+                        h2{
+                            font-size: 1.57vw;
+                            font-weight: bold;
+                            border-bottom: 1px solid black;
+                            @media screen and (max-width:767px){
+                                font-size: 16px;
+                            }
+                            
+                        }
+                        .pic-double{
+                            display: flex;
+                            justify-content: space-between;
+                            @media screen and (max-width:767px){
+                                display: block;
+                            }
+                            .pic7{
+                                max-width: 100%;
+                                height: auto;
+                                width: 47.4%;
+                                @media screen and (max-width:767px){
+                                    width: 100%;
+                                    display: flex;
+                                    border-bottom: 1px solid #efefef;
+                                    position: relative;
+                                    background-image: url(RD_pic4/ico_right_arrow_c777.png) no-repeat right 2% top 46%/2% auto;
+                                }
+                                .pic7-1{
+                                    max-width: 100%;
+                                    height: auto;
+                                    @media screen and (max-width:767px){
+                                        display: none;
+                                    }
+                                    img{
+                                        width: 100%;
+                                        height: auto;
+                                        margin-bottom: 3%;
+                                        @media screen and (max-width:767px){
+                                            display: none;
+                                        }
+                                    }
+                                }
+                                .pic7-2{
+                                    max-width: 100%;
+                                    height: auto;
+                                    display: none;
+                                    @media screen and (max-width:767px){
+                                        display: block;
+                                        width: 20%;
+                                        padding: 5px 15px 14px 0;
+                                    }
+                                    img{
+                                        max-width: 100%;
+                                        height: auto;
+                                        display: none;
+                                        margin-bottom: 3%;
+                                        @media screen and (max-width:767px){
+                                            display: block;
+                                        }
+                                    }
+                                }
+                                p{
+                                    width: 100%;
+                                    white-space: pre-wrap;
+                                    margin-bottom: 3%;
+                                    font-size: 1.14vw;
+                                    font-weight: bold;
+                                    color: #444444;
+                                    @media screen and (max-width:767px){
+                                        position: absolute;
+                                        top: 23%;
+                                        left: 19%;
+                                        font-size: 14px;
+                                        white-space: pre-wrap;
+                                        padding-right: 25%;
+                                        margin: 0;
+                                    }
+                                }
+                                a{
+                                    color: #07b53b;
+                                    display: inline-block;
+                                    font-size: 1vw;
+                                    @media screen and (max-width:767px){
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .kiji-right{
+                        background-color: white;
+                        width: 49.6%;
+                        padding: 3%;
+                        @media screen and (max-width:767px){
+                            width: 100%;
+                            margin: 0 auto;
+                        }
+                        .kiji-right-top{
+                            display: flex;
+                            justify-content: space-between;
+                            border-bottom: 1px solid black;
+                            h2{
+                                font-size: 1.57vw;
+                                font-weight: bold;
+                                @media screen and (max-width:767px){
+                                    font-size: 16px;
+                                }
+                            }
+                            a{
+                                display: inline-block;
+                                font-size: 1.14vw;
+                                color: #444444;
+                                @media screen and (max-width:767px){
+                                    font-size: 14px;
+                                }
+                            }
+                        } 
+                        .kiji-right-bottom{
+                            ul{
+                                li{
+                                    list-style: none;
+                                    padding: 3.8% 9.8% 3.8% 0;
+                                    border-bottom: 1px solid #444444;
+                                    background: url(RD_pic4/ico_right_arrow_c777.png) no-repeat right 1% top 50%/2% auto;
+                                    @media screen and (max-width:767px){
+                                        border-bottom: 1px solid #efefef;
+                                    }
+                                    a{
+                                        color: #444;
+                                        font-size: $font16;
+                                        @media screen and (max-width:767px){
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        
+            }
+            .main8{
+                .m8-news{
+                    width: 82%;
+                    .m8-text{
+                        justify-content: space-between;
+                        border-bottom: 1px solid #444444;
+                        h2{
+                            font-size: $font22;
+                            @media screen and (max-width:767px){
+                                font-size: 20px;
+                            }
+                        }
+                        a{
+                            display: inline-block;
+                            font-size: $font16;
+                            @media screen and (max-width:767px){
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    dl{
+                        border-bottom: 1px solid #dfdfdf;
+                        background: url(RD_pic4/ico_right_arrow_c777.png) no-repeat right 2% top 50%/1% auto;
+                        dt{
+                            float: left;
+                            padding: 2.7% 0;
+                            color: #949494;
+                            font-size: $font16;
+                            @media screen and (max-width:767px){
+                                float: none;
+                                font-size: 14px;
+                                padding: 2.7% 0 0;
+                            }
+                        }
+                        dd{
+                            padding: 2.7% 5% 2.7% 0;
+                            margin-left: 10%; 
+                            margin-bottom: 0;
+                            color: #555555;
+                            font-size: $font16;
+                            @media screen and (max-width:767px){
+                                font-size: 14px;
+                                margin: 0;
+                                padding: 0 5% 2.7% 0;
+                            }
+                        }
+                    }
+                }
+                .m8-ques{
+                    width: 82%;
+                    @media screen and (max-width:767px){
+                        width: 94%;
+                    }
+                    .ques-text{
+                        justify-content: space-between;
+                        @media screen and (max-width:767px){
+                            border-bottom: 1px solid black;
+                        }
+                        h2{
+                            font-size: $font22;
+                            @media screen and (max-width:767px){
+                                font-size: 20px;
+                            }
+                        }
+                        a{
+                            display: inline-block;
+                            font-size: $font14;
+                            text-decoration: none;
+                            @media screen and (max-width:767px){
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    .ques-cont{
+                        padding: 2.5% 8% 2.5% 7%;
+                        margin-top: 1%;
+                        background: url(RD_pic8/top_question.png) no-repeat left 3% top 15%/3% auto white;
+                        @media screen and (max-width:767px){
+                            background: url(RD_pic8/top_question.png) no-repeat left 1% top 50%/4% auto #f5f7f9;
+                            margin-top: 0;
+                            padding: 4% 3% 4% 3%;
+                            border-bottom: 1px solid #dfdfdf;
+                        }
+                        h2{
+                            font-size: $font16;
+                            font-weight: bold;
+                            padding-bottom: 2%;
+                            margin-bottom: 0;
+                            color: #555555;
+                            @media screen and (max-width:767px){
+                                background: url(RD_pic9/ico_down_arrow5.png) no-repeat right 1% top 50%/3% auto;
+                                font-size: 18px;
+                                padding-bottom: 0;
+                                margin-left: 4%;
+                            }
+                        }
+                        span{
+                            display: none;
+                        }
+                       .answer{
+                        p{
+                            font-size: $font14;
+                            @media screen and (max-width:767px){
+                                display: none;
+                            }
+                            span{
+                                color: $color;
+                            }
+                        }
+                        .open{
+                            display: open;
+                        }
+                       }
+                    }
+                }
+                .m8-img{
+                    text-align: center;
+                    .m8-img1{
+                        @media screen and (max-width:767px){
+                            display: none;
+                        }
+                    }
+                    .m8-img2{
+                        display: none;
+                        @media screen and (max-width:767px){
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+            .main9{
+               
+                .text9-1{
+                    background: url(RD_pic3/ico_section_men.png) no-repeat bottom right 15%/9% auto;
+                    @media screen and (max-width:767px){
+                        background: url(RD_pic3/ico_section_men.png) no-repeat bottom right 10%/15% auto;
+                        padding-left: 6%;
+                        width: 100%;
+                    }
+                    h2{
+                        font-size: $font36;
+                        @media screen and (max-width:767px){
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .cont9-1{
+                    width: 80%;
+                    justify-content: space-between;
+                    @media screen and (max-width:767px){
+                        width: 90%;
+                    }
+                    .inner{
+                        height: 100%;
+                        .hed9-1 {
+                            h2{
+                               font-size: $font22; 
+                               @media screen and (max-width:767px){
+                                   font-size: 20px;
+                               }
+                            }
+                        }
+                        .cont9-a{
+                            .p1-9{
+                                font-size: $font22;
+                                @media screen and (max-width:767px){
+                                    font-size: 20px;
+                                }
+                            }
+                            .p2-9{
+                                font-size: $font22;
+                                @media screen and (max-width:767px){
+                                    font-size: 19px;
+                                }
+                            }
+                            .p3-9{
+                                font-size: $font34;
+                                
+                            }
+                            .p3-9-2{
+                                font-size: 30px;
+                                display: inline-block;
+                                
+                            }
+                            .p4-9{
+                                @media screen and (max-width:767px){
+                                    margin: 4px 0;
+                                }
+                            }
+                            .p5-9{
+                                font-size: $font24;
+                                @media screen and (max-width:767px){
+                                    font-size: 19px;
+                                }
+                            }
+                            .h1-9{
+                                font-size: $font36;
+                                @media screen and (max-width:767px){
+                                    font-size: 30px;
+                                }
+                            }
+                            .h2-9{
+                                font-size: $font36;
+                                @media screen and (max-width:767px){
+                                    font-size: 30px;
+                                }
+                            }
+                            .a-9{
+                                text-align: center;
+                                a{
+                                    display: inline-block;
+                                    width: 49%;
+                                    font-weight: bold;
+                                    padding: 2.5% 5%;
+                                    font-size: $font18;
+                                    background: url(RD_pic4/ico_right_arrow_c777.png) no-repeat right 6% top 50%/4% auto white;
+                                    @media screen and (max-width:767px){
+                                        font-size: 18px;
+                                        padding: 9px 0;
+                                        width: 240px;
+                                    }
+                                }
+                            }
+                            .p6-9{
+                                font-size: $font12;
+                                width: 80%;
+                                margin: 0 auto;
+                            }
+                            .p7-9{
+                                width: 90%;
+                                .img9-1{
+                                    width: 80%;
+                                    margin: 0 auto;
+                                    @media screen and (max-width:767px){
+                                        width: 276px;
+                                    }
+                                    img{
+                                        max-width: 100%;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .text9-2{
+                    h2{
+                        font-size: $font36;
+                        @media screen and (max-width:767px){
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .cont9-2{
+                    width: 80%;
+                    justify-content: center;
+                    @media screen and (max-width:767px){
+                        width: 90%;
+                    }
+                    .inner2{
+                        width: 100%;
+                        height: 100%;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .exfee{
+                        h2{
+                            font-size: $font22;
+                            @media screen and (max-width:767px){
+                                font-size: 18px;
+                            }
+                        }
+                        .exfee-month1{
+                            width: 67%;
+                            border-bottom: 1px solid #dfdfdf;
+                            font-size: $font18;
+                            @media screen and (max-width:767px){
+                                width: 93%;
+                                font-size: 16px;
+                            }
+                        }
+                        .exfee-month2{
+                            width: 67%;
+                            justify-content: space-between;
+                            border-bottom: 1px solid #dfdfdf;
+                            font-size: $font20;
+                            @media screen and (max-width:767px){
+                                width: 93%;
+                                font-size: 16px;
+                            }
+                        }
+                        .a-9{
+                            text-align: center;
+                            a{
+                                display: inline-block;
+                                width: 49%;
+                                font-weight: bold;
+                                padding: 2.5% 5%;
+                                font-size: $font18;
+                                background: url(RD_pic4/ico_right_arrow_c777.png) no-repeat right 6% top 50%/4% auto white;
+                                @media screen and (max-width:767px){
+                                    font-size: 18px;
+                                    padding: 9px 0;
+                                    width: 240px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .text9-3{
+                    background: url(RD_pic3/ico_section_women.png) no-repeat right 14% top 100%/8% auto;
+                    @media screen and (max-width:767px){
+                        padding-left: 6%;
+                        width: 100%;
+                        background: url(RD_pic3/ico_section_women.png) no-repeat right 14% bottom;
+                    }
+                    h2{
+                        font-size: $font36;
+                        @media screen and (max-width:767px){
+                            font-size: 20px;
+                        }
+                    } 
+                }
+                .cont9-3{
+                    width: 80%;
+                    justify-content: space-between;
+                    @media screen and (max-width:767px){
+                        width: 90%;
+                    }
+                    .inner3{
+                        height: 100%;
+                        .hed9-3{
+                            h2{
+                                font-size: $font22;
+                                @media screen and (max-width:767px){
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                        .cont9-c{
+                            width: 85%;
+                            .img9-3-l{
+                                width: 53%;
+                                img{
+                                    max-width: 100%;
+                                    height: auto;
+                                }
+                            }
+                            .a9-3-l{
+                                text-align: center;
+                                a{
+                                    display: inline-block;
+                                    width: 58%;
+                                    font-weight: bold;
+                                    padding: 3% 4%;
+                                    font-size: $font18;
+                                    background: url(RD_pic4/ico_right_arrow_c777.png) no-repeat right 6% top 50%/4% auto white;
+                                    @media screen and (max-width:767px){
+                                        font-size: 18px;
+                                        padding: 9px 0;
+                                        width: 240px;
+                                    }
+                                }
+                            }
+                            .p8-9{
+                                font-size: $font12;
+                            }
+                            .img9-3-r{
+                                width: 79%;
+                                @media screen and (max-width:767px){
+                                    text-align: center;
+                                }
+                                img{
+                                    max-width: 100%;
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+                .text9-4A{
+                    h2{
+                        @media screen and (max-width:767px){
+                            font-size: 20px;
+                        } 
+                    }
+                }
+                .cont9-4{
+                    width: 80%;
+                    background: url(RD_pic3/img_top_shop_pc.png) no-repeat left center/50% 100%;
+                    padding: 4% 3% 5% 44%;
+                    @media screen and (max-width:767px){
+                        background-image: none;
+                        padding: 0;
+                        width: 91%;
+                    }
+                    .text9-4B{
+                        color: #555555;
+                        @media screen and (max-width:767px){
+                            width: 97%;
+                            margin: 0 auto;
+                        }
+                        img{
+                            max-width: 100%;
+                        }
+                        .a9-4{
+                            text-align: center;
+                            margin-top: 6%;
+                            a{
+                                display: inline-block;
+                                width: 52%;
+                                font-weight: bold;
+                                padding: 3% 5%;
+                                font-size: $font18;
+                                background: url(RD_pic4/ico_right_arrow_c777.png) no-repeat right 6% top 50%/4% auto white;
+                                @media screen and (max-width:767px){
+                                    font-size: 18px;
+                                    padding: 9px 0;
+                                    width: 240px;
+                                }
+                            }
+                        }
+
+                    }
+                }
+                .text9-5{
+                    border-bottom: 1px solid #dfdfdf;
+                    @media screen and (max-width:767px){
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+                }
+                .cont9-5-A{
+                    width: 80%;
+                    @media screen and (max-width:767px){
+                        width: 95%;
+                    }
+                    .inner{
+                        height: 100%;
+                        @media screen and (max-width:767px){
+                            padding: 16px 10px;
+                            border-bottom: 1px solid #dfdfdf;
+                        }
+                        h2{
+                            font-size: $font20;
+                            font-weight: bold;
+                            @media screen and (max-width:767px){
+                                font-size: 16px;
+                                font-weight: normal;
+                                margin: 0;
+                            }
+                        }
+                        ul{
+                            li{
+                                font-size: $font16;
+                            }
+                        }
+                    }
+                }
+            }
+            .main10{
+                .text10{
+                    width: 40%;
+                    @media screen and (max-width:767px){
+                        width: 60%;
+                    }
+                    h2{
+                        font-size: $font36;
+                        @media screen and (max-width:767px){
+                            font-size: 20px;
+                        }
+                    }
+                }
+                .cont10{
+                    width: 50%;
+                    justify-content: space-between;
+                    @media screen and (max-width:767px){
+                        width: 90%;
+                    }
+                    .cont10-l{
+                        @media screen and (max-width:767px){
+                            margin-bottom: 10px;
+                        }
+                        .inner4-l{
+                            background-image: url(RD_pic10/ico_circle_line2.png),url(RD_pic4/ico_right_arrow_c777.png);
+                            background-repeat: no-repeat,no-repeat;
+                            background-position: left 5% top 50%,right 5% top 50%;
+                            background-size: 13% auto,3% auto;
+                            height: 100%;
+                            padding: 3% 20% 3% 23%;
+                            @media screen and (max-width:767px){
+                                background-image: url(RD_pic10/ico_circle_line2.png),url(RD_pic4/ico_right_arrow_c777.png);
+                                background-repeat: no-repeat,no-repeat;
+                                background-position: left 4% top 50%,right 5% top 50%;
+                                background-size: 7% auto,2% auto;
+                                padding: 3% 20% 3% 14%;
+                            }
+                            p{
+                                margin: 0;
+                                font-size: $font16;
+                                @media screen and (max-width:767px){
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                    .cont10-r{
+                        .inner4-r{
+                            background-image: url(RD_pic10/ico_circle_twitter_pc.png),url(RD_pic4/ico_right_arrow_c777.png);
+                            background-repeat: no-repeat,no-repeat;
+                            background-position: left 5% top 50%,right 5% top 50%;
+                            background-size: 13% auto,3% auto;
+                            height: 100%;
+                            padding: 6% 20% 3% 23%;
+                            @media screen and (max-width:767px){
+                                background-image: url(RD_pic10/ico_circle_twitter_pc.png),url(RD_pic4/ico_right_arrow_c777.png);
+                                background-repeat: no-repeat,no-repeat;
+                                background-position: left 4% top 50%,right 5% top 50%;
+                                background-size: 7% auto,2% auto;
+                                padding: 3% 20% 3% 14%;
+                            }
+                            p{
+                                margin: 0;
+                                font-size: $font16;
+                                @media screen and (max-width:767px){
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .main11{
+                background-color: $color;
+                @media screen and (max-width:767px){
+                    background-color: $color;
+
+                }
+                .text11{
+                    width: 81.4%;
+                    margin: 0 auto;
+                    background: url(RD_pic3/top_footer_bg_pc.png) no-repeat right bottom/45% auto;
+                    @media screen and (max-width:767px){
+                        width: 94.5%;
+                        background-image: none;
+                    }
+                    .text11-a{
+                        padding: 4% 0;
+                        padding-right: 43%;
+                        @media screen and (max-width:767px){
+                            background: url(RD_pic12/top_footer_bg_sp.png) no-repeat right bottom/129px 185px;
+                        }
+                    }
+                    p{
+                        font-size: $font22;
+                        @media screen and (max-width:767px){
+                            font-size: 14px;
+                        }
+                    }
+                    h2{
+                        font-size: 3.42vw;
+                        font-weight: bold;
+                        @media screen and (max-width:767px){
+                            font-weight: normal;
+                            font-size: 16px;
+                            span{
+                                font-size: 30px;
+                            }
+                        }
+                    }
+                    .a-11{
+                        @media screen and (max-width:767px){
+                            width: 35%;
+                            height: auto;
+                        }
+                        img{
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                    
+                    .text-A{
+                        width: 47%;
+                        @media screen and (max-width:767px){
+                            width: 100%;
+                        }
+                        .text-A-a{
+                            width: 90%;
+                            margin: 0 auto;
+                            @media screen and (max-width:767px){
+                                width: 94%;
+                            }
+                            p{
+                             font-size: $font20;
+                             @media screen and (max-width:767px){
+                                 font-size: 17px;
+                             }
+                            }
+                             .p11-1{
+                                 font-size: $font14;
+                                 border-bottom: 1px solid #dfdfdf;
+                                 @media screen and (max-width:767px){
+                                     font-size: 15px;
+                                 }
+                             }
+                             .p11-2{
+                                 font-size: $font12;
+                             }
+                         }
+                    }
+                }
+            }
+        }
+        footer{
+            background-color: #262626;
+            .footer-text{
+                justify-content: space-between;
+                width: 90%;
+                padding: 3% 0;
+                @media screen and (max-width:767px){
+                    width: 35%;
+                }
+                
+                ul{
+                    width: 85%;
+                    @media screen and (max-width:767px){
+                        flex-wrap: wrap;
+                        width: 100%;
+                    }
+                    li{
+                        display: inline-block;
+                        font-size: $font12;
+                        padding: 0 1.5%;
+                        border-right: 1px solid #3c3c3c;
+                        white-space: pre;
+                        @media screen and (max-width:767px){
+                            padding: 0 2.5%;
+                        }
+                    }
+                }
+                img{
+                    width: 15%;
+                }
+            }
+        }
+    }
+    
+}
